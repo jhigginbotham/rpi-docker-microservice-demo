@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cd /services && bundle exec lib/wxapp/wx_service.rb

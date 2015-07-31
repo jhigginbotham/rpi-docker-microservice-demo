@@ -1,0 +1,12 @@
+body { font-family: "Arial"; margin: 0; padding: 0 }
+#top_bar {background: #2e7ab6; height: 60px; width: 100%; }
+/* Lighter: c4d1e1 */
+#top_bar p { margin-left: 10px; padding-top: 10px; font-size: 1.8em; color: #FFFFFF }
+#content { padding: 10 }
+#content h1 { font-weight: normal }
+.response { display: none; }
+.block { margin-right: 20px; border: 1px solid white; padding: 40 10 40 10; float: left; background: #e4e4e4; min-width: 250px }
+.block .icon {  margin-right: 20px;  padding-bottom: 40px; display: inline }
+.block .value {font-size: 1.6em; margin-right: 20px; padding-left: 40px; display: inline }
+.block img { vertical-align: middle; padding-bottom: 10px }
+hr { clear:both; border: 0; height: 20px }

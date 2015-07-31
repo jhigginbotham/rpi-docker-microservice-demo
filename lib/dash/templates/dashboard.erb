@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>EdgeServices Local Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+</head>
+<body>
+  <div id="top_bar"><p>Demo: Microservices on the Edge</p></div>
+
+  <div id="content">
+
+  <h1>Weather Conditions</h1>
+
+  <div class="response"><%=wx_latest.inspect%></div>
+
+    <div class="block">
+      <div class="value"><%='%.1f' % wx_latest['temp_fahrenheit']%><img src="/images/noun_68890.png" width="48" height="48"/></div>
+    </div>
+
+    <div class="block">
+      <div class="value"><%=wx_latest['wind_direction'][0..0].upcase + wx_latest['wind_direction'][1..-1]%></div>
+      <div class="icon"><img src="/images/noun_<%=wx_latest['wind_direction']%>.png" width="48" height="48"/></div>
+    </div>
+
+    <div class="block">
+      <div class="value"><%=wx_latest['wind_speed_mph']%> mph</div>
+      <div class="icon"><img src="/images/noun_125442.png" width="48" height="48"/></div>
+    </div>
+
+    <hr/>
+
+    <h1>Solar Panel Conditions</h1>
+    <div class="response"><%=solar_latest.inspect%></div>
+
+    <div class="block">
+      <div class="value"><%='%.1f' % solar_latest['operating_time_hours']%> hrs</div>
+      <div class="icon"><img src="/images/noun_125313.png" width="48" height="48"/></div>
+    </div>
+
+    <div class="block">
+      <div class="value"><%='%.1f' % solar_latest['total_watts']%>W</div>
+      <div class="icon"><img src="/images/noun_24230.png" width="48" height="48"/></div>
+    </div>
+
+    <div class="block">
+      <div class="value"><%='%.1f' % solar_aggregated['average_total_watts']%>W</div>
+      <div class="icon"><img src="/images/noun_58229.png" width="48" height="48"/></div>
+    </div>
+
+    <hr/>
+</div>
+
+</body>
+</html>
